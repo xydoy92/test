@@ -1,0 +1,72 @@
+
+// colors
+$colorBase: #ffffff;
+$colorSearch: #c8c8c8;
+$colorTitle: #777777;
+$colorSubtitle: #bfbfbf;
+$colorBackground: #f0f0f0;
+$colorBackgroundFeed: #fcfcfc;
+$colorBorder: #f1f1f1;
+$colorBackInput: #f8f8f8;
+$colorFeedTime: #979797;
+$colorTaskTitle: #fd566f;
+$colorTime: #9c9c9c;
+$colorSearchAside: #c0c0c0;
+$colorTriangle: #a889e9;
+// gradients
+$gradientBaseStart: #fc7858;
+$gradientBaseEnd: #fd4e75;
+$gradientCircleStart: #6359b0;
+$gradientCircleEnd: #b26ae1;
+$gradientHistogramStart: #8841af;
+$gradientHistogramEnd: #708ae6;
+$gradientCssStart: #4bb9c3;
+$gradientCssEnd: #52e7c5;
+$gradientVimeoStart: #5885e8;
+$gradientVimeoEnd: #29cddd;
+$gradientDeiantartStart: #ad6a77;
+$gradientDeiantartEnd: #f6b797;
+$gradientVkStart: #f48982;
+$gradientVkEnd: #fbda89;
+// sizes
+$sizeLogo: 30px;
+$sizeSectionTitle: 14px;//h3
+$sizeName: 13px;//h4
+$sizeSimpleText: 12px;//p
+$sizeFeedTime: 8px;//h6
+$sizeStep: 5px;
+// weight
+$weightStep: 100;
+// angle
+$angleStep: 45deg;
+
+
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 500px;
+    height: 500px;
+    background: deepskyblue;
+}
+
+@mixin gradient($angle: $angleStep*6, $start: $gradientBaseStart, $end: $gradientBaseEnd) {
+    background: linear-gradient($angle, $start, $end);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    @include gradient;
+    background-clip: content-box;
+    mask: url(./folder.png);
+}
+
+// .icon--folder {
+//     mask: url(./folder.png);
+// }
